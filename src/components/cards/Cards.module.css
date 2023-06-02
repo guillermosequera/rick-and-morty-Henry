@@ -1,0 +1,9 @@
+.container {
+    border: none;
+    background-color: brown;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 90vw;
+    border-radius: 1.5em;
+}
