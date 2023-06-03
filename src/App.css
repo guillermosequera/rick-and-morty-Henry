@@ -6,15 +6,4 @@
    color: white;
 }
 
-.nav {
-   display: flex;
-   justify-content: flex-end;
-   align-items: center;
-   background-color: aqua;
-   border: red;
-   margin: 1em 0em 1em 0em;
-   width: 90vw;
-   padding: 2em;
-   border-radius: 1.5em;
-   perspective: 1500px;
-}
+
