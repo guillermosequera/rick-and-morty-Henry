@@ -2,6 +2,8 @@ const axios = require('axios');
 
 const URL_BASE = 'https://rickandmortyapi.com/api/character';
 
+
+
 const getCharById = (res, id) => {
     axios(`${URL_BASE}/${id}`)
     .then(response => {

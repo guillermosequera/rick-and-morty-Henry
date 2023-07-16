@@ -31,10 +31,10 @@ function App() {
    useEffect(() => {
       !access && navigate('/');
    }, [access])
-
+ 
 
    function onSearch(id) {
-      if(characters.find(char => char.id === id)){
+      if(characters.find(char => char.id === Number(id))){
          return alert(`Ya existe el personaje con el ID ${id}`);
       }
       axios(`http://localhost:3001/rickandmorty/character/${id}`)
