@@ -17,15 +17,20 @@ function App() {
    const [characters, setCharacters] = useState([]);
    const [access, setAccess] = useState(false);
 
-   const EMAIL = 'memo@henry.com';
-   const PASSWORD = 'pass1234';
+   // const EMAIL = 'memo@henry.com';
+   // const PASSWORD = 'pass1234';
+
+   const URL = 'http://localhost:3001/rickandmorty';
 
    function login({email, password}){
-      if(email === EMAIL && password === PASSWORD){
-         setAccess(true)
-         navigate('/home')
-      }
-      else alert('Usuario o contraseña invalida!');
+      axios(`${URL}/login?email=${email}&password=${password}`)
+      .then(({ data }) =>{
+         const { access } = data;
+
+         setAccess(data);
+
+         access && navigate('/home');
+      })
    }
 
    useEffect(() => {
